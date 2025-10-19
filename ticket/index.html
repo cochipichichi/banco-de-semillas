@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Simulador — Banco de Semillas</title>
+<title>🎟️ Ticket de salida — Banco de Semillas</title>
 <link rel="icon" href="../favicon.ico">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
@@ -27,32 +27,26 @@
   </g>
 </svg>
 
-  </div><h1>🎛️ Simulador</h1></header>
+  </div><h1>🎟️ Ticket de salida</h1></header>
 <main class="grid">
   <article class="card">
-    <h3>Parámetros ambientales</h3>
-    <form id="sim-form" class="sim-form">
+    <h3>Reflexión rápida (5 min)</h3>
+    <form id="ticket-form">
       <div class="actions">
-        <label>Especie
-          <select name="species" class="btn">
-            <option value="physalis">Physalis</option>
-            <option value="salvia">Salvia</option>
-            <option value="eneldo">Eneldo</option>
-            <option value="albahaca">Albahaca</option>
-          </select>
-        </label>
-        <label>Temp (°C) <input class="btn" type="number" step="0.5" name="temp" value="22"></label>
-        <label>Humedad (%) <input class="btn" type="number" step="1" name="hum" value="55"></label>
-        <label>Horas de luz <input class="btn" type="number" step="0.5" name="light" value="8"></label>
-        <label>Plantas <input class="btn" type="number" step="1" name="plants" value="1" min="1"></label>
-        <button class="btn accent" type="submit">Calcular</button>
+        <label>Tu nombre <input class="btn" name="nombre" required placeholder="Nombre y curso"></label>
+        <label>1) ¿Qué aprendiste hoy? <input class="btn" name="aprendizaje" required></label>
+        <label>2) ¿Qué te quedó difícil? <input class="btn" name="dificil" required></label>
+        <label>3) ¿Qué harías distinto la próxima clase? <input class="btn" name="mejora" required></label>
+        <label>4) Autoevaluación (1–5) <input class="btn" type="number" name="auto" min="1" max="5" value="4" required></label>
+        <button class="btn accent" type="submit">Guardar</button>
+        <button class="btn" type="button" id="btn-export">⬇️ Exportar CSV</button>
         <a class="btn" href="../index.html">⬅️ Volver</a>
       </div>
     </form>
   </article>
   <article class="card">
-    <h3>Resultado</h3>
-    <div id="sim-out">—</div>
+    <h3>Respuestas guardadas en este dispositivo</h3>
+    <div id="ticket-list" class="small">—</div>
   </article>
 </main>
 
@@ -70,7 +64,7 @@
 
 
 <script src="../assets/main.js"></script>
-<script src="../assets/simulador.js"></script>
+<script src="../assets/ticket.js"></script>
 <script src="../particles.js"></script>
 </body>
 </html>
