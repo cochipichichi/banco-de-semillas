@@ -1,0 +1,165 @@
+{
+  "albahaca": [
+    {
+      "q": "¿Cuál es el rango de temperatura óptimo para albahaca?",
+      "opts": [
+        "10–15 °C",
+        "20–28 °C",
+        "30–35 °C"
+      ],
+      "a": 1
+    },
+    {
+      "q": "¿Qué humedad relativa favorece a la albahaca?",
+      "opts": [
+        "20–35%",
+        "55–75%",
+        "80–95%"
+      ],
+      "a": 1
+    },
+    {
+      "q": "Para albahaca, ¿cuál es un requerimiento típico de agua por planta/día en condiciones estándar?",
+      "opts": [
+        "80–120 ml",
+        "180–200 ml",
+        "230–270 ml"
+      ],
+      "a": 2
+    },
+    {
+      "q": "Si la luz diaria baja de 6 horas, ¿qué ocurre con la salud esperada en el simulador?",
+      "opts": [
+        "Aumenta",
+        "Se mantiene igual",
+        "Disminuye"
+      ],
+      "a": 2
+    }
+  ],
+  "physalis": [
+    {
+      "q": "¿Rango de germinación típico de Physalis?",
+      "opts": [
+        "1–3 días",
+        "7–14 días",
+        "30–40 días"
+      ],
+      "a": 1
+    },
+    {
+      "q": "Temperatura óptima para Physalis:",
+      "opts": [
+        "18–26 °C",
+        "10–15 °C",
+        "28–35 °C"
+      ],
+      "a": 0
+    },
+    {
+      "q": "Humedad relativa óptima para Physalis:",
+      "opts": [
+        "50–70%",
+        "20–40%",
+        "75–90%"
+      ],
+      "a": 0
+    },
+    {
+      "q": "Si la humedad está por debajo del rango, la recomendación de riego debe…",
+      "opts": [
+        "Disminuir",
+        "Mantenerse",
+        "Aumentar"
+      ],
+      "a": 2
+    }
+  ],
+  "salvia": [
+    {
+      "q": "Temperatura óptima para Salvia:",
+      "opts": [
+        "15–25 °C",
+        "5–12 °C",
+        "28–35 °C"
+      ],
+      "a": 0
+    },
+    {
+      "q": "Rango de humedad recomendado para Salvia:",
+      "opts": [
+        "25–35%",
+        "40–60%",
+        "70–85%"
+      ],
+      "a": 1
+    },
+    {
+      "q": "¿Qué sucede con la frecuencia de riego cuando el requerimiento diario es muy bajo?",
+      "opts": [
+        "2 veces al día",
+        "Diario",
+        "Cada 2 días"
+      ],
+      "a": 2
+    }
+  ],
+  "eneldo": [
+    {
+      "q": "Temperatura óptima para Eneldo:",
+      "opts": [
+        "16–22 °C",
+        "10–14 °C",
+        "25–33 °C"
+      ],
+      "a": 0
+    },
+    {
+      "q": "Germinación típica del Eneldo:",
+      "opts": [
+        "2–4 días",
+        "10–14 días",
+        "20–30 días"
+      ],
+      "a": 1
+    },
+    {
+      "q": "Si la salud esperada es baja, el volumen de agua por planta recomendado tiende a…",
+      "opts": [
+        "Bajar",
+        "Subir levemente",
+        "Subir"
+      ],
+      "a": 2
+    }
+  ],
+  "mixto": [
+    {
+      "q": "Cuando la temperatura está dentro del rango óptimo, la puntuación de salud por temperatura es…",
+      "opts": [
+        "0",
+        "0.5",
+        "1.0"
+      ],
+      "a": 2
+    },
+    {
+      "q": "El simulador considera como rango objetivo de horas de luz:",
+      "opts": [
+        "2–4",
+        "6–10",
+        "12–14"
+      ],
+      "a": 1
+    },
+    {
+      "q": "Si una variable se aleja 4 unidades del rango, la penalización aproximada es…",
+      "opts": [
+        "0%",
+        "20%",
+        "80%"
+      ],
+      "a": 1
+    }
+  ]
+}

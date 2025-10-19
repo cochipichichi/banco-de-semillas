@@ -1,24 +1,12 @@
 
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>⚙️ Ajustes — Banco de Semillas</title>
-<link rel="icon" href="../favicon.ico">
-<link rel="stylesheet" href="../assets/style.css">
-</head>
-<body>
-<canvas id="particles" aria-hidden="true"></canvas>
+<link rel="icon" href="../favicon.ico"><link rel="stylesheet" href="../assets/style.css">
+</head><body><canvas id="particles"></canvas>
 <header class="header"><div class="logo">
-    
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <radialGradient id="g" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#7cff7c"/>
-      <stop offset="100%" stop-color="#2a8c2a"/>
-    </radialGradient>
-  </defs>
+  <defs><radialGradient id="g" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7cff7c"/><stop offset="100%" stop-color="#2a8c2a"/></radialGradient></defs>
   <circle cx="32" cy="32" r="30" fill="#0e140f" stroke="#274" stroke-width="2"/>
   <g transform="translate(32,40)">
     <path d="M0 0c6-6 10-14 6-22-7 2-10 8-10 14 0 3 1 6 4 8z" fill="url(#g)"/>
@@ -26,43 +14,31 @@
     <rect x="-1" y="-18" width="2" height="18" fill="#38b000" rx="1"/>
   </g>
 </svg>
-
-  </div><h1>⚙️ Ajustes de integración</h1></header>
+</div><h1>⚙️ Ajustes de integración</h1></header>
 <main class="grid">
   <article class="card">
     <h3>Google Sheets (Apps Script)</h3>
-    <p>Ingresa tu URL de Apps Script para guardar automáticamente las respuestas del 🎟️ Ticket de salida y, si quieres, resultados del Quiz.</p>
+    <p>Ingresa tu URL de Apps Script para guardar automáticamente las respuestas de 🎟️ Ticket y 🧪 Quiz. Si configuraste <code>API_KEY</code> en el Script, ingrésala también.</p>
     <div class="actions">
-      <label>URL de Apps Script
-        <input class="btn" id="endpoint" placeholder="https://script.google.com/macros/s/AKfyc.../exec">
-      </label>
+      <label>URL de Apps Script<input class="btn" id="endpoint" placeholder="https://script.google.com/macros/s/AKfyc.../exec"></label>
+      <label>API Key (opcional)<input class="btn" id="apikey" placeholder="Si configuraste API_KEY en Apps Script"></label>
       <button class="btn accent" id="save">Guardar</button>
       <button class="btn" id="test">Probar envío</button>
       <a class="btn" href="../index.html">⬅️ Volver</a>
     </div>
-    <p class="small">La URL queda guardada de forma local en este dispositivo (localStorage). Puedes cambiarla cuando quieras.</p>
+    <p class="small">La URL y la API Key quedan guardadas localmente (localStorage). El ID de tu Sheet se define dentro de <code>AppsScript_Semillas.gs</code>.</p>
   </article>
-  <article class="card">
-    <h3>Estado</h3>
-    <pre id="status" class="small">—</pre>
-  </article>
+  <article class="card"><h3>Estado</h3><pre id="status" class="small">—</pre></article>
 </main>
-
 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
-    <p>🌱 Autores</p>
-    <p>👩‍🏫 Belén Acuña Pérez — 📧 <a href="mailto:belen.acpe@gmail.com">belen.acpe@gmail.com</a> · 📞 +56 9 6266 4960</p>
+    <p><a href="mailto:belen.acpe@gmail.com">belen.acpe@gmail.com</a> · 📞 +56 9 6266 4960</p>
     <p>👨‍💻 Francisco Pinto — 📧 <a href="mailto:franciscoandresp@gmail.com">franciscoandresp@gmail.com</a> · 📞 +56 9 2002 7992</p>
     <p>Hecho con ❤️ para el Liceo Bicentenario de Excelencia Polivalente San Nicolás</p>
-    <p>Proyecto Educativo - 👁️ 3D · 📱 AR · 🥽 VR</p>
+    <p>Proyecto Educativo — 👁️ vista 3D · 📱 Realidad Aumentada</p>
   </div>
 </footer>
 
-
-
-<script src="../assets/main.js"></script>
-<script src="../assets/sheets.js"></script>
-<script src="../particles.js"></script>
-</body>
-</html>
+<script src="../assets/main.js"></script><script type="module" src="../assets/sheets.js"></script><script src="../particles.js"></script>
+</body></html>

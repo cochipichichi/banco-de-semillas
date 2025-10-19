@@ -1,24 +1,10 @@
 
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>🎟️ Ticket de salida — Banco de Semillas</title>
-<link rel="icon" href="../favicon.ico">
-<link rel="stylesheet" href="../assets/style.css">
-</head>
-<body>
-<canvas id="particles" aria-hidden="true"></canvas>
-<header class="header"><div class="logo">
-    
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>🎟️ Ticket de salida — Banco de Semillas</title>
+<link rel="icon" href="../favicon.ico"><link rel="stylesheet" href="../assets/style.css"></head>
+<body><canvas id="particles"></canvas><header class="header"><div class="logo">
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <radialGradient id="g" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#7cff7c"/>
-      <stop offset="100%" stop-color="#2a8c2a"/>
-    </radialGradient>
-  </defs>
+  <defs><radialGradient id="g" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7cff7c"/><stop offset="100%" stop-color="#2a8c2a"/></radialGradient></defs>
   <circle cx="32" cy="32" r="30" fill="#0e140f" stroke="#274" stroke-width="2"/>
   <g transform="translate(32,40)">
     <path d="M0 0c6-6 10-14 6-22-7 2-10 8-10 14 0 3 1 6 4 8z" fill="url(#g)"/>
@@ -26,31 +12,17 @@
     <rect x="-1" y="-18" width="2" height="18" fill="#38b000" rx="1"/>
   </g>
 </svg>
-
-  </div><h1>🎟️ Ticket de salida</h1></header>
-<main class="grid">
-  <article class="card">
-    <h3>Reflexión rápida (5 min)</h3>
-    <form id="ticket-form">
-      <div class="actions">
-        <label>Tu nombre <input class="btn" name="nombre" required placeholder="Nombre y curso"></label>
-        <label>1) ¿Qué aprendiste hoy? <input class="btn" name="aprendizaje" required></label>
-        <label>2) ¿Qué te quedó difícil? <input class="btn" name="dificil" required></label>
-        <label>3) ¿Qué harías distinto la próxima clase? <input class="btn" name="mejora" required></label>
-        <label>4) Autoevaluación (1–5) <input class="btn" type="number" name="auto" min="1" max="5" value="4" required></label>
-        <button class="btn accent" type="submit">Guardar</button>
-        <button class="btn" type="button" id="btn-export">⬇️ Exportar CSV</button>
-        <a class="btn" href="../index.html">⬅️ Volver</a>
-      </div>
-    </form>
-  </article>
-  <article class="card">
-    <h3>Respuestas guardadas en este dispositivo</h3>
-    <div id="ticket-list" class="small">—</div>
-  </article>
-</main>
-
-
+</div><h1>🎟️ Ticket de salida</h1></header>
+<main class="grid"><article class="card"><h3>Reflexión rápida (5 min)</h3>
+<form id="ticket-form"><div class="actions">
+<label>Tu nombre <input class="btn" name="nombre" required placeholder="Nombre y curso"></label>
+<label>1) ¿Qué aprendiste hoy? <input class="btn" name="aprendizaje" required></label>
+<label>2) ¿Qué te quedó difícil? <input class="btn" name="dificil" required></label>
+<label>3) ¿Qué harías distinto la próxima clase? <input class="btn" name="mejora" required></label>
+<label>4) Autoevaluación (1–5) <input class="btn" type="number" name="auto" min="1" max="5" value="4" required></label>
+<button class="btn accent" type="submit">Guardar</button><button class="btn" type="button" id="btn-export">⬇️ Exportar CSV</button><a class="btn" href="../index.html">⬅️ Volver</a>
+</div></form></article>
+<article class="card"><h3>Respuestas guardadas en este dispositivo</h3><div id="ticket-list" class="small">—</div></article></main>
 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
@@ -61,10 +33,4 @@
   </div>
 </footer>
 
-
-
-<script src="../assets/main.js"></script>
-<script src="../assets/ticket.js"></script>
-<script src="../particles.js"></script>
-</body>
-</html>
+<script src="../assets/main.js"></script><script type="module" src="../assets/ticket.js"></script><script src="../particles.js"></script></body></html>
