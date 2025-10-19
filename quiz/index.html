@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Simulador — Banco de Semillas</title>
+<title>🧪 Quiz — Banco de Semillas</title>
 <link rel="icon" href="../favicon.ico">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
@@ -27,32 +27,37 @@
   </g>
 </svg>
 
-  </div><h1>🎛️ Simulador</h1></header>
+  </div><h1>🧪 Quiz de Salud del Suelo y Germinación</h1></header>
 <main class="grid">
   <article class="card">
-    <h3>Parámetros ambientales</h3>
-    <form id="sim-form" class="sim-form">
+    <h3>Responde y obtén retroalimentación inmediata</h3>
+    <form id="quiz-form">
       <div class="actions">
-        <label>Especie
-          <select name="species" class="btn">
-            <option value="physalis">Physalis</option>
-            <option value="salvia">Salvia</option>
-            <option value="eneldo">Eneldo</option>
-            <option value="albahaca">Albahaca</option>
-          </select>
-        </label>
-        <label>Temp (°C) <input class="btn" type="number" step="0.5" name="temp" value="22"></label>
-        <label>Humedad (%) <input class="btn" type="number" step="1" name="hum" value="55"></label>
-        <label>Horas de luz <input class="btn" type="number" step="0.5" name="light" value="8"></label>
-        <label>Plantas <input class="btn" type="number" step="1" name="plants" value="1" min="1"></label>
-        <button class="btn accent" type="submit">Calcular</button>
+        <label>Tu nombre <input class="btn" name="nombre" required placeholder="Nombre y curso"></label>
+        <div class="small"><strong>1)</strong> La albahaca prefiere temperaturas…
+          <label><input type="radio" name="q1" value="a" required> 10–15 °C</label>
+          <label><input type="radio" name="q1" value="b"> 20–28 °C</label>
+          <label><input type="radio" name="q1" value="c"> 30–35 °C</label>
+        </div>
+        <div class="small"><strong>2)</strong> Si la humedad está por debajo del rango óptimo, el riego recomendado…
+          <label><input type="radio" name="q2" value="a" required> Disminuye</label>
+          <label><input type="radio" name="q2" value="b"> Se mantiene igual</label>
+          <label><input type="radio" name="q2" value="c"> Aumenta</label>
+        </div>
+        <div class="small"><strong>3)</strong> Para Physalis, una germinación típica ocurre entre…
+          <label><input type="radio" name="q3" value="a" required> 1–3 días</label>
+          <label><input type="radio" name="q3" value="b"> 7–14 días</label>
+          <label><input type="radio" name="q3" value="c"> 30–40 días</label>
+        </div>
+        <button class="btn accent" type="submit">Enviar</button>
+        <button class="btn" type="button" id="btn-export-quiz">⬇️ Exportar CSV</button>
         <a class="btn" href="../index.html">⬅️ Volver</a>
       </div>
     </form>
   </article>
   <article class="card">
     <h3>Resultado</h3>
-    <div id="sim-out">—</div>
+    <div id="quiz-out" class="small">—</div>
   </article>
 </main>
 
@@ -68,8 +73,11 @@
   </div>
 </footer>
 
+
+
+
 <script src="../assets/main.js"></script>
-<script src="../assets/simulador.js"></script>
+<script type="module" src="../assets/quiz.js"></script>
 <script src="../particles.js"></script>
 </body>
 </html>

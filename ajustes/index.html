@@ -4,13 +4,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Comparativa — Banco de Semillas</title>
+<title>⚙️ Ajustes — Banco de Semillas</title>
 <link rel="icon" href="../favicon.ico">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 <canvas id="particles" aria-hidden="true"></canvas>
 <header class="header"><div class="logo">
+    
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="g" cx="50%" cy="50%" r="50%">
@@ -25,16 +26,28 @@
     <rect x="-1" y="-18" width="2" height="18" fill="#38b000" rx="1"/>
   </g>
 </svg>
-</div><h1>📋 Comparativa</h1></header>
+
+  </div><h1>⚙️ Ajustes de integración</h1></header>
 <main class="grid">
   <article class="card">
-    <h3>Parámetros clave</h3>
-    <p>Altura, riego, luz, tiempo de germinación, temperatura y cosecha estimada.</p>
+    <h3>Google Sheets (Apps Script)</h3>
+    <p>Ingresa tu URL de Apps Script para guardar automáticamente las respuestas del 🎟️ Ticket de salida y, si quieres, resultados del Quiz.</p>
     <div class="actions">
+      <label>URL de Apps Script
+        <input class="btn" id="endpoint" placeholder="https://script.google.com/macros/s/AKfyc.../exec">
+      </label>
+      <button class="btn accent" id="save">Guardar</button>
+      <button class="btn" id="test">Probar envío</button>
       <a class="btn" href="../index.html">⬅️ Volver</a>
     </div>
+    <p class="small">La URL queda guardada de forma local en este dispositivo (localStorage). Puedes cambiarla cuando quieras.</p>
+  </article>
+  <article class="card">
+    <h3>Estado</h3>
+    <pre id="status" class="small">—</pre>
   </article>
 </main>
+
 
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
@@ -46,7 +59,10 @@
   </div>
 </footer>
 
+
+
 <script src="../assets/main.js"></script>
+<script src="../assets/sheets.js"></script>
 <script src="../particles.js"></script>
 </body>
 </html>

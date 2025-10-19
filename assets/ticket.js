@@ -1,3 +1,4 @@
+import { sendToSheets, flushQueue } from './sheets.js';
 
 const KEY = 'tickets_semillas_v1';
 
@@ -35,6 +36,7 @@ function download(filename, text){
 
 document.addEventListener('DOMContentLoaded', () => {
   render();
+    flushQueue();
   const form = document.getElementById('ticket-form');
   form.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -43,8 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const list = load();
     list.push(data);
     save(list);
+    // send to Sheets (best-effort)
+    sendToSheets({type:'ticket', data, ts: new Date().toISOString(), page:'ticket'});
     form.reset();
     render();
+    flushQueue();
     alert('¡Guardado en este dispositivo! Puedes exportar a CSV cuando quieras.');
   });
   document.getElementById('btn-export').addEventListener('click', ()=>{
