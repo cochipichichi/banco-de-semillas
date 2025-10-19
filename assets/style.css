@@ -1,0 +1,60 @@
+
+:root{
+  --bg:#0c0f10;
+  --fg:#e6ffe6;
+  --accent:#29a329;
+  --muted:#88cc88;
+  --card:#141a1b;
+  --shadow: 0 10px 25px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color:var(--fg);
+  background:var(--bg);
+  overflow-x:hidden;
+}
+#particles{position:fixed; inset:0; z-index:-1}
+.header{
+  display:flex; align-items:center; gap:.8rem;
+  padding:1rem 1.25rem; position:sticky; top:0; background:linear-gradient(to bottom, rgba(12,15,16,.9), rgba(12,15,16,.4)); backdrop-filter: blur(6px);
+}
+.logo{width:40px; height:40px}
+.logo svg{display:block; width:100%; height:100%}
+.header h1{margin:0; font-size:1.1rem; color:var(--muted); letter-spacing:.5px}
+.controls{margin-left:auto; display:flex; gap:.5rem; align-items:center}
+button, .btn{
+  appearance:none; border:none; padding:.7rem 1rem; border-radius:14px; background:var(--card); color:var(--fg);
+  box-shadow: var(--shadow); cursor:pointer; transition: transform .06s ease, background .2s;
+}
+.btn.accent{background:var(--accent); color:#001b00; font-weight:700}
+.btn:hover{transform: translateY(-1px)}
+.grid{
+  padding:1.2rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; max-width:1200px; margin:0 auto;
+}
+.card{
+  background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:18px; padding:1rem; box-shadow: var(--shadow);
+}
+.card h3{margin:.3rem 0  .4rem 0}
+.card p{margin:.2rem 0 .8rem 0; color:#cde8cd}
+.card .actions{display:flex; flex-wrap:wrap; gap:.5rem}
+.hero{
+  text-align:center; padding:3rem 1.25rem 1.2rem 1.25rem;
+}
+.hero h2{margin:0; font-weight:800; font-size: clamp(1.6rem, 1rem + 2vw, 2.5rem); color:#d8ffd8}
+.hero .tagline{opacity:.9; color:#bfffbf}
+.site-footer{
+  border-top:1px solid rgba(255,255,255,.08); margin-top:2rem; padding:1.2rem; background:#0b0f0f;
+}
+.footer-inner{max-width:1100px; margin:0 auto; text-align:center; color:#cfe9cf}
+.hidden{display:none !important}
+.contrast body, body.contrast {
+  background:#000 !important; color:#fff !important;
+}
+.contrast .card{background:#000; border-color:#fff}
+.contrast .header{background:#000}
+.contrast .site-footer{background:#000}
+.lang-toggle{font-size:.9rem; padding:.5rem .75rem}
+.small {font-size:.9rem; opacity:.85}

@@ -1,0 +1,54 @@
+
+<!doctype html><html lang="es"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Eneldo · Quiz</title>
+<link rel="stylesheet" href="./assets/style.css"/></head><body>
+<div class="wrap">
+  <header><h1>🧪 Quiz — Eneldo</h1><div class="row">
+    <a class="btn" href="./index.html">🏠 Inicio</a>
+    <button class="btn" onclick="toggleContrast()">🌓 Alto contraste</button>
+  </div></header>
+  <div class="card">
+    <p class="subtitle">Responde y descarga tus resultados en CSV.</p>
+    <div id="form" class="grid">
+      <div class="card"><label>1) ¿Época recomendada de siembra?</label><input id="q1" class="btn" placeholder="Tu respuesta"/></div>
+      <div class="card"><label>2) ¿Requerimientos de luz?</label><input id="q2" class="btn" placeholder="Tu respuesta"/></div>
+      <div class="card"><label>3) ¿Riego ideal?</label><input id="q3" class="btn" placeholder="Tu respuesta"/></div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <button class="btn" onclick="save()">✅ Guardar</button>
+      <button class="btn" onclick="exportar()">📥 Exportar CSV</button>
+    </div>
+  </div>
+  <footer>Quiz educativo — Pancho & Belén</footer>
+</div>
+<script src="./assets/main.js"></script>
+<script>
+  const KEY = "eneldo-quiz";
+  function save(){
+    const data = {
+      fecha: new Date().toISOString(),
+      p1: document.getElementById('q1').value,
+      p2: document.getElementById('q2').value,
+      p3: document.getElementById('q3').value
+    };
+    let arr = read(KEY, []); arr.push(data); store(KEY, arr);
+    alert('Respuestas guardadas ✔️');
+  }
+  function exportar(){
+    const arr = read(KEY, []);
+    if(!arr.length) return alert('No hay respuestas guardadas');
+    const rows = [['fecha','p1','p2','p3'], ...arr.map(o=>[o.fecha,o.p1,o.p2,o.p3])];
+    downloadCSV('eneldo-quiz.csv', rows);
+  }
+</script>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <p><a href="mailto:belen.acpe@gmail.com">belen.acpe@gmail.com</a> · 📞 +56 9 6266 4960</p>
+    <p>👨‍💻 Francisco Pinto — 📧 <a href="mailto:franciscoandresp@gmail.com">franciscoandresp@gmail.com</a> · 📞 +56 9 2002 7992</p>
+    <p>Hecho con ❤️ para el Liceo Bicentenario de Excelencia Polivalente San Nicolás</p>
+    <p>Proyecto Educativo — 👁️ vista 3D · 📱 Realidad Aumentada</p>
+  </div>
+</footer>
+</body></html>

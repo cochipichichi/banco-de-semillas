@@ -1,0 +1,1 @@
+// Particles handled in main.js (kept file to satisfy structure).
