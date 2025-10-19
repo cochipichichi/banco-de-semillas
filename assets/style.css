@@ -1,28 +1,32 @@
-
+/* Base layout (extract) */
 :root{--bg:#0c0f10;--fg:#e6ffe6;--accent:#29a329;--muted:#88cc88;--card:#141a1b;--shadow:0 10px 25px rgba(0,0,0,.35)}
 *{box-sizing:border-box}html,body{height:100%}
 body{margin:0;font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial;color:var(--fg);background:var(--bg);overflow-x:hidden}
 #particles{position:fixed;inset:0;z-index:-1}
 .header{display:flex;align-items:center;gap:.8rem;padding:1rem 1.25rem;position:sticky;top:0;background:linear-gradient(to bottom,rgba(12,15,16,.9),rgba(12,15,16,.4));backdrop-filter:blur(6px)}
-.logo{width:40px;height:40px}
-.logo svg{display:block;width:100%;height:100%}
+.logo{width:40px;height:40px}.logo svg{display:block;width:100%;height:100%}
 .header h1{margin:0;font-size:1.1rem;color:var(--muted);letter-spacing:.5px}
 .controls{margin-left:auto;display:flex;gap:.5rem;align-items:center}
 button,.btn{appearance:none;border:none;padding:.7rem 1rem;border-radius:14px;background:var(--card);color:var(--fg);box-shadow:var(--shadow);cursor:pointer;transition:transform .06s ease,background .2s}
-.btn.accent{background:var(--accent);color:#001b00;font-weight:700}
-.btn:hover{transform:translateY(-1px)}
+.btn.accent{background:var(--accent);color:#001b00;font-weight:700}.btn:hover{transform:translateY(-1px)}
 .grid{padding:1.2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;max-width:1200px;margin:0 auto}
 .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:1rem;box-shadow:var(--shadow)}
 .card h3{margin:.3rem 0 .4rem 0}.card p{margin:.2rem 0 .8rem 0;color:#cde8cd}.card .actions{display:flex;flex-wrap:wrap;gap:.5rem}
 .hero{text-align:center;padding:3rem 1.25rem 1.2rem 1.25rem}
-.hero h2{margin:0;font-weight:800;font-size:clamp(1.6rem,1rem + 2vw,2.5rem);color:#d8ffd8}
-.hero .tagline{opacity:.9;color:#bfffbf}
+.hero h2{margin:0;font-weight:800;font-size:clamp(1.6rem,1rem + 2vw,2.5rem);color:#d8ffd8}.hero .tagline{opacity:.9;color:#bfffbf}
 .site-footer{border-top:1px solid rgba(255,255,255,.08);margin-top:2rem;padding:1.2rem;background:#0b0f0f}
 .footer-inner{max-width:1100px;margin:0 auto;text-align:center;color:#cfe9cf}
-.hidden{display:none !important}
-.contrast body,body.contrast{background:#000 !important;color:#fff !important}
-.contrast .card{background:#000;border-color:#fff}.contrast .header{background:#000}.contrast .site-footer{background:#000}
-.lang-toggle{font-size:.9rem;padding:.5rem .75rem}
 .small{font-size:.9rem;opacity:.85}
-label{display:flex;flex-direction:column;gap:.4rem}
-input[type="number"],input[type="text"],input[type="email"],select{min-width:160px}
+/* === Species Cards === */
+.species-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.9rem;margin-top:.75rem}
+.species-card{position:relative;display:flex;align-items:center;gap:.9rem;padding:1rem;border-radius:16px;background:linear-gradient(180deg,rgba(41,163,41,.18),rgba(20,26,27,.6)),var(--card);border:1px solid rgba(255,255,255,.08);text-decoration:none;color:var(--fg);box-shadow:var(--shadow);transition:transform .12s ease,box-shadow .2s ease,border-color .2s ease,background .3s ease;outline:none}
+.species-card:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,180,90,.25);border-color:rgba(124,255,124,.35)}
+.species-card:focus-visible{box-shadow:0 0 0 3px rgba(124,255,124,.6),0 12px 24px rgba(0,0,0,.35)}
+.species-emoji{width:44px;height:44px;display:grid;place-items:center;font-size:22px;border-radius:12px;background:radial-gradient(100% 100% at 50% 0%,#87ff87 0%,#29a329 100%);color:#001b00;box-shadow:inset 0 1px 0 rgba(255,255,255,.4)}
+.species-meta{display:flex;flex-direction:column;gap:.1rem}
+.species-title{margin:0;font-size:1.05rem;line-height:1.2;letter-spacing:.2px}
+.species-sub{margin:0;font-size:.85rem;opacity:.85;color:#cfe9cf}
+/* === Optional: Species Buttons variant === */
+.species-buttons{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.75rem}
+.btn-species{font-weight:700;padding:.9rem 1.1rem;background:linear-gradient(180deg,rgba(41,163,41,.18),rgba(20,26,27,.6)),var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px}
+.btn-species:hover{border-color:rgba(124,255,124,.35)}
